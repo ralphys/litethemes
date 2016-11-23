@@ -1,4 +1,4 @@
-Lite Manual
+Lite Themes
 ================
 
 Various themes for Linux Lite including mouse, icon and system themes
