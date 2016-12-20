@@ -1,0 +1,13 @@
+Package: lite-themes
+Version: 2.0-0120-linuxlite
+Essential: yes
+Section: base
+Priority: required
+Installed-Size: 76300
+Depends: gnome-themes-standard, gtk2-engines-murrine
+Homepage: http://www.linuxliteos.com
+Maintainer: Jerry Bezencon<valtam@linuxliteos.com>
+Architecture: all
+Description: Lite Themes
+ Various themes for Linux Lite including mouse, icon 
+ and system themes.
