@@ -1,15 +1,17 @@
 #! /bin/sh
 # Various postinst jobs for lite-themes
-
 gtk-update-icon-cache -t /usr/share/icons/Faenza-Dark /usr/share/icons/Faenza /usr/share/icons/hicolor /usr/share/icons/gnome
 
 set -e
 
+# file ownership
+chown root:root /usr/share/fonts/truetype/Droid*
+chown -R root:root /usr/share/themes/Arc*
+
+# file permissions
+chmod 644 /usr/share/fonts/truetype/Droid*
+find /usr/share/themes/ -type d -exec chmod 755 {} \;
+find /usr/share/themes/ -type f -exec chmod 644 {} \;
+
 # Generate font cache
-cd /usr/share/fonts/truetype/
-
-sudo chown root:root Droid*
-sudo chmod 755 Droid*
-
-sudo fc-cache -f -v
-
+fc-cache -f -v
